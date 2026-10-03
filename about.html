@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- ABOUTME: Placeholder content page describing how the notes site is organized and published. -->
+<!-- ABOUTME: Written during repo bootstrap to prove the publish pipeline; replace or expand as the site grows. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How this site works</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="back"><a href="index.html">&larr; Notes index</a></p>
+    <p class="eyebrow">Site &middot; 2026-10-03</p>
+    <h1>How this site works</h1>
+    <p class="lede">Each page here is a self-contained HTML document written from research, experiments, or source material, and published on push.</p>
+    <p class="freshness" style="margin:14px 0 0;font-size:12.5px;opacity:.65">Contents last updated <time datetime="2026-10-03">2026-10-03</time></p>
+  </div>
+</header>
+<main class="wrap">
+  <nav class="toc"><ol>
+    <li><a href="#pages">Pages</a></li>
+    <li><a href="#publishing">Publishing</a></li>
+  </ol></nav>
+
+  <section id="pages">
+    <h2><span class="num">01</span> Pages</h2>
+    <p>The <a href="index.html">hub</a> lists every topic. A topic with several pages gets its own directory and a topic page that lists them. Each content page shows when its contents last changed, just under the title.</p>
+    <div class="note good"><strong>Source beside the page.</strong> Raw input that a page is written from, such as research output or release notes, is kept in the repo next to the page.</div>
+  </section>
+
+  <section id="publishing">
+    <h2><span class="num">02</span> Publishing</h2>
+    <p>A push to <code>main</code> scans for secrets, checks freshness stamps, and publishes the HTML, styles, and images. Markdown sources and scripts stay in the repo and are not published.</p>
+    <figure>
+    <svg viewBox="0 0 760 170" role="img" aria-label="Raw input flows into an HTML page, which is published to the Pages site.">
+      <defs>
+        <marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" class="head"/>
+        </marker>
+      </defs>
+      <!-- three columns: 220px boxes at x=20, 270, 520; 30px gutters; row y=50, height 70 -->
+      <rect class="box"  x="20"  y="50" width="220" height="70" rx="10"/>
+      <text class="title" x="130" y="80"  text-anchor="middle">Raw input</text>
+      <text class="desc"  x="130" y="100" text-anchor="middle">research, release notes</text>
+
+      <rect class="abox" x="270" y="50" width="220" height="70" rx="10"/>
+      <text class="title" x="380" y="80"  text-anchor="middle">HTML page</text>
+      <text class="desc"  x="380" y="100" text-anchor="middle">stamped, linked from hub</text>
+
+      <rect class="box"  x="520" y="50" width="220" height="70" rx="10"/>
+      <text class="title" x="630" y="80"  text-anchor="middle">Pages site</text>
+      <text class="desc"  x="630" y="100" text-anchor="middle">published on push</text>
+
+      <!-- edges run gutter to gutter; labels sit above, centered on the gutter -->
+      <path class="edge" d="M240 85 H268" marker-end="url(#ah1)"/>
+      <path class="edge" d="M490 85 H518" marker-end="url(#ah1)"/>
+      <text class="elbl" x="255" y="40" text-anchor="middle">write</text>
+      <text class="elbl" x="505" y="40" text-anchor="middle">push</text>
+    </svg>
+    <figcaption>The usual path from source material to a published page.</figcaption>
+    </figure>
+  </section>
+
+  <footer><a href="index.html">&larr; Notes index</a></footer>
+</main>
+</body>
+</html>

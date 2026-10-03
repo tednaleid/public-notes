@@ -1,1 +1,5 @@
-.llm
+.llm/
+.claude/
+.DS_Store
+.playwright-cli/
+_site/
